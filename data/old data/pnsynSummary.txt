@@ -1,0 +1,36 @@
+AN          ADate                SDate             Gender   
+ S11-17760:  1   Min.   :2011-09-20   Min.   :2011-09-29   Male:427  
+ S11-17973:  1   1st Qu.:2012-05-03   1st Qu.:2012-05-16             
+ S11-17975:  1   Median :2013-02-07   Median :2013-02-12             
+ S11-17976:  1   Mean   :2013-04-05   Mean   :2013-04-13             
+ S11-17980:  1   3rd Qu.:2014-02-24   3rd Qu.:2014-03-03             
+ S11-17999:  1   Max.   :2015-02-02   Max.   :2015-02-06             
+ (Other)  :421                                                       
+      Age                                Path         ANline     
+ Min.   :46.00   Alexander H. Boag,        :145   Min.   :   10  
+ 1st Qu.:62.00   Christopher Davidson, M.D.:177   1st Qu.: 3576  
+ Median :67.00   David M. Berman,          : 58   Median : 7128  
+ Mean   :67.27   Marosh Manduch, M.D.      : 47   Mean   : 7084  
+ 3rd Qu.:73.00                                    3rd Qu.:10597  
+ Max.   :85.00                                    Max.   :14061  
+                                                                 
+             hist          gg1             gg2             ggs        
+ Adenocarcinoma:426   Min.   :3.000   Min.   :3.000   Min.   : 6.000  
+ Other         :  1   1st Qu.:3.000   1st Qu.:3.000   1st Qu.: 6.000  
+                      Median :3.000   Median :4.000   Median : 7.000  
+                      Mean   :3.454   Mean   :3.747   Mean   : 7.201  
+                      3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.: 8.000  
+                      Max.   :5.000   Max.   :5.000   Max.   :10.000  
+                                                                      
+    posCores          proCa           totCores         epe       svi     
+ Min.   : 1.000   Min.   :  0.20   Min.   : 3.0   Not    :398   Not:427  
+ 1st Qu.: 2.000   1st Qu.:  3.75   1st Qu.:10.0   Present: 29            
+ Median : 4.000   Median : 10.00   Median :10.0                          
+ Mean   : 4.609   Mean   : 19.56   Mean   :10.5                          
+ 3rd Qu.: 6.000   3rd Qu.: 29.80   3rd Qu.:12.0                          
+ Max.   :14.000   Max.   :100.00   Max.   :16.0                          
+                                                                         
+            lvi           pni     
+ Indeterminate:  2   Not    :269  
+ Not          :423   Present:151  
+ Present      :  2   NA's   :  7  

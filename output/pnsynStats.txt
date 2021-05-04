@@ -1,0 +1,93 @@
+
+> #the table function will return counts
+> Path.PNI.table <- with(SynGen, table(Path, pni))
+> #the prop function will return proportions
+> #  and needs to operate on a table
+> #  the 1 parameter in prop means calculate proportions on rows, not columns
+> prop.table(Path.PNI.table, 1)
+
+                       pni
+Path                         Not Present
+  Alexander H. Boag,          88      54
+  Christopher Davidson, M.D. 112      62
+  David M. Berman,            41      17
+  Marosh Manduch, M.D.        28      18
+
+
+                            pni
+Path                               Not   Present
+  Alexander H. Boag,         0.6197183 0.3802817
+  Christopher Davidson, M.D. 0.6436782 0.3563218
+  David M. Berman,           0.7068966 0.2931034
+  Marosh Manduch, M.D.       0.6086957 0.3913043
+> Path.EPE.table <- with(SynGen, table(Path, epe))
+> prop.table(Path.EPE.table, 1)
+
+                       epe
+Path                         Not Present
+  Alexander H. Boag,         138       7
+  Christopher Davidson, M.D. 161      16
+  David M. Berman,            54       4
+  Marosh Manduch, M.D.        45       2
+
+
+                            epe
+Path                                Not    Present
+  Alexander H. Boag,         0.95172414 0.04827586
+  Christopher Davidson, M.D. 0.90960452 0.09039548
+  David M. Berman,           0.93103448 0.06896552
+  Marosh Manduch, M.D.       0.95744681 0.04255319
+> chisq.test(Path.EPE.table) 
+
+        Pearson's Chi-squared test
+
+data:  Path.EPE.table
+X-squared = 2.7751, df = 3, p-value = 0.4276
+
+Warning message:
+In chisq.test(Path.EPE.table) : Chi-squared approximation may be incorrect
+> 
+> # this uses Pearson's Chi-squared test of independence to test if EPE rate
+> #  is independent of pathologist
+> # this gives a p of .43 so the EPE result is independent of pathologist
+> # the test throws a warning due to small values of some table entries
+> # combine the 3 lower EPE rates and compare to the one higher rate
+> tbl <- Path.EPE.table
+> ab <- "Alexander H. Boag,"
+> cd <- "Christopher Davidson, M.D."
+> db <- "David M. Berman,"
+> mm <- "Marosh Manduch, M.D."
+> ctbl = rbind(tbl[cd,], tbl[ab,] + tbl[db,] + tbl[mm,]) 
+> chisq.test(ctbl)
+
+        Pearson's Chi-squared test with Yates' continuity correction
+
+data:  ctbl
+X-squared = 1.8449, df = 1, p-value = 0.1744
+
+> #this now gives a p of .17 so EPE is still independent of pathologist based
+> # on grouping of all pathologists except CD vs CD alone
+> # no longer throws an error
+
+                            gg1
+Path                           3   4   5
+  Alexander H. Boag,          85  54   6
+  Christopher Davidson, M.D. 104  69   4
+  David M. Berman,            35  17   6
+  Marosh Manduch, M.D.        25  22   0
+> prop.table(Path.gg1.table, 1)
+                            gg1
+Path                                  3          4          5
+  Alexander H. Boag,         0.58620690 0.37241379 0.04137931
+  Christopher Davidson, M.D. 0.58757062 0.38983051 0.02259887
+  David M. Berman,           0.60344828 0.29310345 0.10344828
+  Marosh Manduch, M.D.       0.53191489 0.46808511 0.00000000
+> chisq.test(Path.gg1.table) 
+
+        Pearson's Chi-squared test
+
+data:  Path.gg1.table
+X-squared = 12.046, df = 6, p-value = 0.06095
+
+Warning message:
+In chisq.test(Path.gg1.table) : Chi-squared approximation may be incorrect

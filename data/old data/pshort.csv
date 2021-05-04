@@ -1,0 +1,11 @@
+AccNo,AccDate,SODate,gender,age,path,hist,gg1,gg2,ggs,pCores,proCa,tCores,epe,svi,lvi,pni
+S15-280,2015/01/07,2015/01/14,Male,66,"Dr. Jane Jones, MD",Adenocarcinoma,4,3,7,10,85,10,Not,Not,Not,Present
+S15-283,2015/01/07,2015/01/14,Male,78,"Dr. Jane Jones, MD",Adenocarcinoma,4,5,9,11,80,11,Present,Not,Not,Present
+S15-285,2015/01/07,2015/01/14,Male,69,"Dr. Jane Jones, MD",Adenocarcinoma,3,3,6,1,1,12,Not,Not,Not,Not
+S15-409,2015/01/08,2015/01/15,Male,65,"Dr. John Smith, MD",Adenocarcinoma,3,4,7,2,2,10,Not,Not,Not,Not
+S15-414,2015/01/08,2015/01/16,Male,74,"Dr. John Smith, MD",Adenocarcinoma,3,3,6,1,5,9,Not,Not,Not,Not
+S15-1321,2015/01/21,2015/01/23,Male,68,"Dr. Nancy Black, MD",Adenocarcinoma,3,4,7,1,10,8,Not,Not,Not,Not
+S15-1323,2015/01/21,2015/01/23,Male,71,"Dr. Nancy Black, MD",Adenocarcinoma,4,4,8,2,1,12,Present,Not,Not,Present
+S15-1326,2015/01/21,2015/01/28,Male,78,"Dr. Nancy Black, MD",Adenocarcinoma,4,3,7,2,4,12,Not,Not,Not,Not
+S15-1329,2015/01/21,2015/01/28,Male,62,"Dr. Nancy Black, MD",Adenocarcinoma,4,3,7,1,3,12,Not,Not,Not,Not
+S15-1642,2015/01/26,2015/02/02,Male,78,"Dr. Jane Jones, MD",Adenocarcinoma,4,4,8,4,20,12,Not,Not,Not,Not

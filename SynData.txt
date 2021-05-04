@@ -1,0 +1,12 @@
+varNM$pat$datPos$datClass
+hist$histologic type$3$fac
+gg1$predominant$5$num
+gg2$secondary$6$num
+ggs$total$4$num
+posCores$number of cores positive$5$num
+proCa$proportion$9$num
+totCores$total number$5$num
+epe$periprostatic$4$fac
+svi$seminal$4$fac
+lvi$lymph$3$fac
+pni$perineural$3$fac
